@@ -1,25 +1,29 @@
 import { Component } from '@angular/core';
+import { Customer } from './model';
 
 @Component({
   selector: 'app-root',
   template: `
-    <h1 [style.color]="nameColor" [class.isActive]="isActive">{{ name.toUpperCase() }}</h1>
-    <img [src]="photoUrl" />
+    <h1 [style.color]="nameColor" [class.isActive]="isActive">{{ customer.name.toUpperCase() }}</h1>
+    <img [src]="customer.photoUrl" />
     <br />
     <button (click)="this.isActive = !this.isActive" type="button">Przełącz podkreślenie</button>
     <button (click)="changeColor()" type="button">Przełącz kolor</button>
     <br />
-    <input type="text" [(ngModel)]="name" [ngModelOptions]="{ updateOn: 'blur' }" />
+    <input type="text" [(ngModel)]="customer.name" [ngModelOptions]="{ updateOn: 'blur' }" />
   `,
   styles: [
     '.isActive { text-decoration: underline; }'
   ]
 })
 export class AppComponent {
-  name: string = "Jan Kowalski";
+  customer: Customer = {
+    name: "Jan Kowalski",
+    photoUrl: "assets/images/customer.png"
+  };
+
   nameColor: string = "blue";
   isActive: boolean = true;
-  photoUrl: string = "assets/images/customer.png";
 
   constructor() {}
 
