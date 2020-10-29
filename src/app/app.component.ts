@@ -5,6 +5,9 @@ import { Customer } from './model';
   selector: 'app-root',
   template: `
     <h1 [style.color]="nameColor" [class.isActive]="isActive">{{ customer.name.toUpperCase() }}</h1>
+    <p>{{ customer.description }}</p>
+    <p>Wiek: {{ customer.age }}</p>
+    <p>Adres: {{ customer.address.street }} {{ customer.address.houseNumber }}, {{ customer.address.city }}</p>
     <img [src]="customer.photoUrl" />
     <br />
     <button (click)="this.isActive = !this.isActive" type="button">Przełącz podkreślenie</button>
