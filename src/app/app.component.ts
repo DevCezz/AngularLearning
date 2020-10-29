@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
     <img [src]="photoUrl" />
     <br />
     <button (click)="this.isActive = !this.isActive" type="button">Przełącz podkreślenie</button>
+    <button (click)="changeColor()" type="button">Przełącz kolor</button>
   `,
   styles: [
     '.isActive { text-decoration: underline; }'
@@ -19,4 +20,8 @@ export class AppComponent {
   photoUrl: string = "assets/images/customer.png";
 
   constructor() {}
+
+  changeColor() {
+    this.nameColor = this.nameColor === "blue" ? "red" : "blue";
+  }
 }
