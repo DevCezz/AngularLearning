@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <h1 [style.color]="nameColor" [class.isActive]="isActive">{{ name.toUpperCase() }}</h1>
     <img [src]="photoUrl" />
     <br />
-    <button (click)="changeIsActive()" type="button">Przełącz podkreślenie</button>
+    <button (click)="this.isActive = !this.isActive" type="button">Przełącz podkreślenie</button>
   `,
   styles: [
     '.isActive { text-decoration: underline; }'
@@ -19,8 +19,4 @@ export class AppComponent {
   photoUrl: string = "assets/images/customer.png";
 
   constructor() {}
-
-  changeIsActive() {
-    this.isActive = !this.isActive;
-  }
 }
