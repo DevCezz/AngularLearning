@@ -10,9 +10,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name: string = "Jan Kowalski";
 
-  constructor() {
-    setTimeout(() => {
-      this.name = "Wojciech Drzazga";
-    }, 3000);
-  }
+  constructor() {}
 }
