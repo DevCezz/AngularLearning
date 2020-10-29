@@ -104,6 +104,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "customer-manager"
+    }
+  },
+  "defaultProject": "customer-manager",
+  "cli": {
+    "analytics": "decf267d-85eb-407b-9b89-ade184ceb1a1"
+  }
 }
