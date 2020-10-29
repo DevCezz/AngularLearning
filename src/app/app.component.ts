@@ -19,7 +19,14 @@ import { Customer } from './model';
 export class AppComponent {
   customer: Customer = {
     name: "Jan Kowalski",
-    photoUrl: "assets/images/customer.png"
+    photoUrl: "assets/images/customer.png",
+    age: 43,
+    description: "Very important client",
+    address: {
+      street: "Zielona",
+      houseNumber: 5,
+      city: "Warszawa"
+    }
   };
 
   nameColor: string = "blue";
