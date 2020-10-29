@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
     <button (click)="this.isActive = !this.isActive" type="button">Przełącz podkreślenie</button>
     <button (click)="changeColor()" type="button">Przełącz kolor</button>
     <br />
-    <input type="text" [(ngModel)]="name" #ctrl="ngModel" />
+    <input type="text" [(ngModel)]="name" [ngModelOptions]="{ updateOn: 'blur' }" />
   `,
   styles: [
     '.isActive { text-decoration: underline; }'
