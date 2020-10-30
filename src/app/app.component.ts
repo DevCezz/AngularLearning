@@ -1,22 +1,31 @@
+
 import { Component } from '@angular/core';
 import { Customer } from './model';
 
 @Component({
   selector: 'app-root',
   template: `
-    <p>{{ nameInput.value }}</p>
-    <h1 [style.color]="nameColor" [class.isActive]="isActive">{{ customer.name.toUpperCase() }}</h1>
-    <p>{{ customer.description }}</p>
-    <p>Wiek: {{ customer.age }}</p>
-    <p>Adres: {{ customer.address.street }} {{ customer.address.houseNumber }}, {{ customer.address.city }}</p>
-    <img [src]="customer.photoUrl" />
-    <br />
-    <button (click)="this.isActive = !this.isActive" type="button">Przełącz podkreślenie</button>
-    <button (click)="changeColor()" type="button">Przełącz kolor</button>
-    <br />
-    <input type="text" [(ngModel)]="customer.name" [ngModelOptions]="{ updateOn: 'blur' }" />
-    <br />
-    <input #nameInput type="text" [value]="customer.name" (input)="customer.name = nameInput.value" />
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h1 [style.color]="nameColor" [class.isActive]="isActive">{{ customer.name.toUpperCase() }}</h1>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-7">
+              <p>{{ customer.description }}</p>
+              <p>Wiek: {{ customer.age }}</p>
+              <p>Adres: {{ customer.address.street }} {{ customer.address.houseNumber }}, {{ customer.address.city }}</p>
+              <button class="btn btn-primary" (click)="this.isActive = !this.isActive" type="button">Przełącz podkreślenie</button>
+              <button class="btn btn-primary" (click)="changeColor()" type="button">Przełącz kolor</button>
+            </div>
+            <div class="col-sm-5">
+              <img [src]="customer.photoUrl" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   `,
   styles: [
     '.isActive { text-decoration: underline; }'
