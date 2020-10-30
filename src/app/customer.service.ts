@@ -20,6 +20,6 @@ export class CustomerService {
   }
 
   createCustomer(customer: Customer) {
-    
+    return this.httpClient.post(`${this.config.apiUrl}/customers`, customer);
   }
 }
