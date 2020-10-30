@@ -9,11 +9,12 @@ import { Customer, CustomerType } from './model';
       <div class="card">
         <div class="card-body">
           <select [(ngModel)]="customer">
+            <option [ngValue]="null">Brak klienta</option>
             <option *ngFor="let c of customers" [ngValue]="c">{{ c.name }}</option>
           </select>
         </div>
       </div>
-      <div class="card">
+      <div class="card" *ngIf="customer">
         <div class="card-header">
           <h1 [style.color]="nameColor" [class.isActive]="isActive">
             {{ customer.name.toUpperCase() }}
@@ -110,7 +111,7 @@ export class AppComponent {
       ]
     }
   ];
-  customer: Customer = this.customers[0];
+  customer: Customer = null;
 
   nameColor: string = "blue";
   isActive: boolean = true;
