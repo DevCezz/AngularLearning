@@ -68,6 +68,10 @@ export class CustomerBrowserComponent {
     }
   ];
 
+  changeColor() {
+    this.detailsComponent.changeColor();
+  }
+
   onShift(direction: string) {
     const idx = this.customers.indexOf(this.customer);
     
