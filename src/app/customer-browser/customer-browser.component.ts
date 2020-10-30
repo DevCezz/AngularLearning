@@ -20,7 +20,9 @@ export class CustomerBrowserComponent implements OnInit {
   constructor(private customerService: CustomerService) {}
 
   ngOnInit(): void {
-    this.customers = this.customerService.getCustomers();
+    this.customerService.getCustomers().subscribe(response => {
+      this.customers = response;
+    });
   }
 
   changeColor() {
