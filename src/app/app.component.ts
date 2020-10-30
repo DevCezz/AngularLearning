@@ -14,10 +14,6 @@ export class AppComponent {
 
   customer: Customer = null;
 
-  nameColor: string = "blue";
-  isActive: boolean = true;
-  showPhoto: boolean = false;
-
   constructor() {}
 
   changeColor() {

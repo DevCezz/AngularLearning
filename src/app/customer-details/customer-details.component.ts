@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-customer-details',
@@ -6,11 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class CustomerDetailsComponent implements OnInit {
+export class CustomerDetailsComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  nameColor: string = "blue";
+  isActive: boolean = true;
+  showPhoto: boolean = false;
 
 }
