@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './highlight.directive';
 import { CustomerBrowserComponent } from './customer-browser/customer-browser.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
+import { CustomerService } from './customer.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    CustomerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
