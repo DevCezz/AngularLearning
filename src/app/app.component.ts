@@ -75,7 +75,8 @@ export class AppComponent {
       categories: [
         "zagraniczny",
         "mikroprzedsiębiorstwo",
-        "duży obrót"
+        "duży obrót",
+        "branża malarska"
       ]
     },
     {
