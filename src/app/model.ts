@@ -4,6 +4,7 @@ export interface Customer {
     description: string;
     age: number;
     address: Address;
+    type: CustomerType;
 }
 
 export interface Address {
