@@ -63,8 +63,4 @@ export class CustomerBrowserComponent {
       ]
     }
   ];
-
-  // utworzenie pola o takiej samej nazwie jak enum daje możliwość korzystania,
-  // ze stałych switcha a nie z wartości liczbowych
-  CustomerType = CustomerType;
 }

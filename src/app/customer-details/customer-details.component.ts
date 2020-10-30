@@ -15,4 +15,8 @@ export class CustomerDetailsComponent {
   isActive: boolean = true;
   showPhoto: boolean = false;
 
+  // utworzenie pola o takiej samej nazwie jak enum daje możliwość korzystania,
+  // ze stałych switcha a nie z wartości liczbowych
+  CustomerType = CustomerType;
+
 }
