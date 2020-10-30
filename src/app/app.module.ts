@@ -11,7 +11,8 @@ import { CustomerService } from './customer.service';
 import { CONFIG, Config } from './model';
 import { ToastrModule } from 'ngx-toastr';
 import { MessageService } from './message.service';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { CustomerAddComponent } from './customer-add/customer-add.component'
 
 const config: Config = {
   customerLimit: 10,
@@ -23,7 +24,8 @@ const config: Config = {
     AppComponent,
     HighlightDirective,
     CustomerBrowserComponent,
-    CustomerDetailsComponent
+    CustomerDetailsComponent,
+    CustomerAddComponent
   ],
   imports: [
     BrowserModule,
