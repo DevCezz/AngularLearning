@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './highlight.directive';
 import { CustomerBrowserComponent } from './customer-browser/customer-browser.component';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HighlightDirective,
-    CustomerBrowserComponent
+    CustomerBrowserComponent,
+    CustomerDetailsComponent
   ],
   imports: [
     BrowserModule,
