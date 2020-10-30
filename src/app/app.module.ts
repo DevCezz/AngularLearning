@@ -13,7 +13,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { MessageService } from './message.service';
 
 const config: Config = {
-  customerLimit: 10
+  customerLimit: 10,
+  apiUrl: 'http://localhost:13378'
 }
 
 @NgModule({
