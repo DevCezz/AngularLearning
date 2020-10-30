@@ -14,6 +14,8 @@ import { Customer } from './model';
     <button (click)="changeColor()" type="button">Przełącz kolor</button>
     <br />
     <input type="text" [(ngModel)]="customer.name" [ngModelOptions]="{ updateOn: 'blur' }" />
+    <br />
+    <input #nameInput type="text" [value]="customer.name" (input)="customer.name = nameInput.value" />
   `,
   styles: [
     '.isActive { text-decoration: underline; }'
