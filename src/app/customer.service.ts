@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Customer, CustomerType } from './model';
+import { Config, Customer, CustomerType } from './model';
 
 @Injectable({
   providedIn: 'root'
@@ -59,7 +59,7 @@ export class CustomerService {
     }
   ];
 
-  constructor() { }
+  constructor(private config: Config) { }
 
   getCustomers() {
     return this.customers;
