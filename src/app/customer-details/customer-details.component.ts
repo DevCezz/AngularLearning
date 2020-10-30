@@ -47,6 +47,7 @@ export class CustomerDetailsComponent implements OnInit, OnDestroy, OnChanges {
 
   changeColor() {
     this.nameColor = this.nameColor === "blue" ? "red" : "blue";
+    this.messageService.success('Udało się zmienić kolor!');
   }
 
   left() {
