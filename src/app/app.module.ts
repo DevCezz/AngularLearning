@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './highlight.directive';
+import { CustomerBrowserComponent } from './customer-browser/customer-browser.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective
+    HighlightDirective,
+    CustomerBrowserComponent
   ],
   imports: [
     BrowserModule,
