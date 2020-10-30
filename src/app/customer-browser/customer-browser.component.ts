@@ -63,4 +63,14 @@ export class CustomerBrowserComponent {
       ]
     }
   ];
+
+  onShift(direction: string) {
+    const idx = this.customers.indexOf(this.customer);
+    
+    if (idx > 0 && direction === 'left') {
+      this.customer = this.customers[idx - 1];
+    } else if (idx < this.customers.length - 1 && direction === 'right') {
+      this.customer = this.customers[idx + 1];
+    }
+  }
 }
