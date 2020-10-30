@@ -12,8 +12,6 @@ import { Customer, CustomerType } from './model';
 })
 export class AppComponent {
 
-  customer: Customer = null;
-
   constructor() {}
 
   changeColor() {
