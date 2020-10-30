@@ -13,4 +13,9 @@ class ManualGearbox extends Gearbox {}
 class Car {
     gearbox: Gearbox;
     engine: Engine;
+
+    constructor() {
+        this.gearbox = new AutomaticGearbox();
+        this.engine = new PetrolEngine();
+    }
 }
