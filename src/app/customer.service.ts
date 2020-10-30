@@ -6,8 +6,7 @@ import { Customer, CustomerType } from './model';
 })
 export class CustomerService {
   
-
-  customers: Customer[] = [
+  private customers: Customer[] = [
     {
       name: "Jan Kowalski",
       photoUrl: "assets/images/customer.png",
