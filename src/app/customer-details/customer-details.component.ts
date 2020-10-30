@@ -14,12 +14,12 @@ export class CustomerDetailsComponent {
   @Input()
   customer: Customer;
 
+  @Output()
+  shift = new EventEmitter<string>();
+
   nameColor: string = "blue";
   isActive: boolean = true;
   showPhoto: boolean = false;
-
-  @Output()
-  shift = new EventEmitter<string>();
 
   // utworzenie pola o takiej samej nazwie jak enum daje możliwość korzystania,
   // ze stałych switcha a nie z wartości liczbowych
