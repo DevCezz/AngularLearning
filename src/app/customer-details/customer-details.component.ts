@@ -19,7 +19,7 @@ export class CustomerDetailsComponent {
   showPhoto: boolean = false;
 
   @Output()
-  shift = new EventEmitter();
+  shift = new EventEmitter<string>();
 
   // utworzenie pola o takiej samej nazwie jak enum daje możliwość korzystania,
   // ze stałych switcha a nie z wartości liczbowych
