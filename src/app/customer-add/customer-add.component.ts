@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../customer.service';
+import { CustomerType } from '../model';
 
 @Component({
   selector: 'app-customer-add',
@@ -13,7 +14,7 @@ export class CustomerAddComponent implements OnInit {
   age: number;
   type: CustomerType;
 
-  CustomerType: CustomerType;
+  CustomerType = CustomerType;
 
   constructor(private customerService: CustomerService) { }
 
