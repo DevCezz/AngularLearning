@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Customer, CustomerType } from '../model';
 
 @Component({
@@ -9,7 +9,7 @@ import { Customer, CustomerType } from '../model';
     '.oddCategory { color: green; }'
   ]
 })
-export class CustomerDetailsComponent implements OnInit, OnDestroy {
+export class CustomerDetailsComponent implements OnInit, OnDestroy, OnChanges {
   
   @Input()
   customer: Customer;
@@ -28,16 +28,16 @@ export class CustomerDetailsComponent implements OnInit, OnDestroy {
   CustomerType = CustomerType;
   
   ngOnInit(): void {
-    this.counterHandle = window.setInterval(() => { 
-      this.counter++;
-      console.log('conuter++');
-    }, 1000);
-    console.log(`timer ${this.counterHandle} started`);
+    console.log(`init`);
   }
-
+  
   ngOnDestroy(): void {
-    clearInterval(this.counterHandle)
-    console.log(`destroy ${this.counterHandle} timer, time elapsed ${this.counter} s`);
+    console.log(`destroy`);
+  }
+  
+  // Wywołuje się przed init
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('change');
   }
 
   changeColor() {
