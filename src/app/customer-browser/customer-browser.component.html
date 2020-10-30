@@ -5,5 +5,6 @@
             <option *ngFor="let c of customers" [ngValue]="c">{{ c.name }}</option>
         </select>
     </div>
-    <app-customer-details [customer]="customer"></app-customer-details>
 </div>
+
+<app-customer-details [customer]="customer"></app-customer-details>
