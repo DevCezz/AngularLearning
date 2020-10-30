@@ -20,4 +20,19 @@ export class CustomerAddComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  add() {
+    this.customerService.createCustomer({
+      name: this.name,
+      age: this.age,
+      type: this.type,
+      photoUrl: '',
+      categories: [],
+      description: '',
+      address: {
+        city: '',
+        houseNumber: 0,
+        street: ''
+      }
+    });
+  }
 }
