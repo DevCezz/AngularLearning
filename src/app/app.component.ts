@@ -7,6 +7,13 @@ import { Customer, CustomerType } from './model';
   template: `
     <div class="container">
       <div class="card">
+        <div class="card-body">
+          <select [(ngModel)]="customer">
+            <option *ngFor="let c of customers" [ngValue]="c">{{ c.name }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="card">
         <div class="card-header">
           <h1 [style.color]="nameColor" [class.isActive]="isActive">
             {{ customer.name.toUpperCase() }}
