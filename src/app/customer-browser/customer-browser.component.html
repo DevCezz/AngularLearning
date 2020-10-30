@@ -7,4 +7,6 @@
     </div>
 </div>
 
-<app-customer-details [customer]="customer" (shift)="onShift($event)"></app-customer-details>
+<div *ngIf="customer">
+    <app-customer-details [customer]="customer" (shift)="onShift($event)"></app-customer-details>
+</div>
