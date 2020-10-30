@@ -19,3 +19,7 @@ export enum CustomerType {
     Premium,
     VIP
 }
+
+export interface Config {
+    customerLimit: number;
+}
