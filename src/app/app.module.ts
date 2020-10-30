@@ -11,6 +11,7 @@ import { CustomerService } from './customer.service';
 import { CONFIG, Config } from './model';
 import { ToastrModule } from 'ngx-toastr';
 import { MessageService } from './message.service';
+import { HttpClientModule } from '@angular/common/http'
 
 const config: Config = {
   customerLimit: 10,
@@ -28,6 +29,7 @@ const config: Config = {
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     ToastrModule.forRoot()
   ],
   providers: [
