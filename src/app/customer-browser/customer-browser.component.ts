@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { CustomerDetailsComponent } from '../customer-details/customer-details.component';
+import { CustomerService } from '../customer.service';
 import { Customer, CustomerType } from '../model';
 
 @Component({
@@ -14,6 +15,8 @@ export class CustomerBrowserComponent {
   detailsComponent: CustomerDetailsComponent;
 
   customer: Customer = null;
+
+  constructor(private customerService: CustomerService) {}
 
   changeColor() {
     this.detailsComponent.changeColor();
