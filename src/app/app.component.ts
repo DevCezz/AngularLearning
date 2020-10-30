@@ -59,7 +59,12 @@ export class AppComponent {
       houseNumber: 5,
       city: "Warszawa"
     },
-    type: CustomerType.Premium
+    type: CustomerType.Premium,
+    categories: [
+      "zagraniczny",
+      "mikroprzedsiębiorstwo",
+      "duży obrót"
+    ]
   };
 
   nameColor: string = "blue";
