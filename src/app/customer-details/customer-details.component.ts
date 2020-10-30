@@ -5,6 +5,8 @@ import { Customer, CustomerType } from '../model';
   selector: 'app-customer-details',
   templateUrl: './customer-details.component.html',
   styles: [
+    '.isActive { text-decoration: underline; }',
+    '.oddCategory { color: green; }'
   ]
 })
 export class CustomerDetailsComponent {
