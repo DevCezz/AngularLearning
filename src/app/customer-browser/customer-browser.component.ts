@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { CustomerDetailsComponent } from '../customer-details/customer-details.component';
 import { Customer, CustomerType } from '../model';
 
 @Component({
@@ -8,6 +9,9 @@ import { Customer, CustomerType } from '../model';
   ]
 })
 export class CustomerBrowserComponent {
+
+  @ViewChild('details')
+  detailsComponent: CustomerDetailsComponent;
 
   customer: Customer = null;
 
