@@ -27,7 +27,8 @@ const config: Config = {
     FormsModule
   ],
   providers: [
-    CustomerService
+    CustomerService,
+    { provide: Config, useValue: config }
   ],
   bootstrap: [AppComponent]
 })
