@@ -4,9 +4,10 @@
             <option [ngValue]="null">Brak klienta</option>
             <option *ngFor="let c of customers" [ngValue]="c">{{ c.name }}</option>
         </select>
+        <button class="btn btn-primary" (click)="changeColor()">Zmień kolor</button>
     </div>
 </div>
 
 <div *ngIf="customer">
-    <app-customer-details [customer]="customer" (shift)="onShift($event)"></app-customer-details>
+    <app-customer-details #details [customer]="customer" (shift)="onShift($event)"></app-customer-details>
 </div>
