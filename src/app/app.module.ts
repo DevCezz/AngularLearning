@@ -9,6 +9,7 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
 import { CustomerService } from './customer.service';
 import { CONFIG, Config } from './model';
 import { ToastrModule } from 'ngx-toastr';
+import { MessageService } from './message.service';
 
 const config: Config = {
   customerLimit: 10
@@ -28,7 +29,8 @@ const config: Config = {
   ],
   providers: [
     CustomerService,
-    { provide: CONFIG, useValue: config }
+    { provide: CONFIG, useValue: config },
+    MessageService
   ],
   bootstrap: [AppComponent]
 })
