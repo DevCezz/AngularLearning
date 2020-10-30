@@ -21,17 +21,23 @@ export class CustomerDetailsComponent implements OnInit, OnDestroy {
   isActive: boolean = true;
   showPhoto: boolean = false;
   counter: number = 0;
+  counterHandle: number;
   
   // utworzenie pola o takiej samej nazwie jak enum daje możliwość korzystania,
   // ze stałych switcha a nie z wartości liczbowych
   CustomerType = CustomerType;
   
   ngOnInit(): void {
-    console.log('init');
+    this.counterHandle = window.setInterval(() => { 
+      this.counter++;
+      console.log('conuter++');
+    }, 1000);
+    console.log(`timer ${this.counterHandle} started`);
   }
 
   ngOnDestroy(): void {
-    console.log('destroy');
+    clearInterval(this.counterHandle)
+    console.log(`destroy ${this.counterHandle} timer, time elapsed ${this.counter} s`);
   }
 
   changeColor() {
