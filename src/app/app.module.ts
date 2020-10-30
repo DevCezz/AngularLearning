@@ -8,6 +8,7 @@ import { CustomerBrowserComponent } from './customer-browser/customer-browser.co
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { CustomerService } from './customer.service';
 import { CONFIG, Config } from './model';
+import { ToastrModule } from 'ngx-toastr';
 
 const config: Config = {
   customerLimit: 10
@@ -22,7 +23,8 @@ const config: Config = {
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     CustomerService,
