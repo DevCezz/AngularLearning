@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { CONFIG, Config, Customer, CustomerType } from './model';
 
+import 'rxjs/add/operator/map';
+
 @Injectable({
   providedIn: 'root'
 })
