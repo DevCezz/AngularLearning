@@ -24,6 +24,7 @@ export enum CustomerType {
 
 export interface Config {
     customerLimit: number;
+    apiUrl: string;
 }
 
 export const CONFIG = new InjectionToken<Config>('app.config');
