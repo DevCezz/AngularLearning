@@ -30,7 +30,7 @@ import { Customer, CustomerType } from './model';
           <div class="row">
             <div class="col-sm-7">
               <p>{{ customer.description }}</p>
-              <p>Wiek: {{ customer.age }}</p>
+              <p appHighlight>Wiek: {{ customer.age }}</p>
               <p>Adres: {{ customer.address.street }} {{ customer.address.houseNumber }}, {{ customer.address.city }}</p>
               <ul>
                 <li *ngFor="let category of customer.categories; let oddCategory = odd" [class.oddCategory]="oddCategory">{{ category }}</li>
