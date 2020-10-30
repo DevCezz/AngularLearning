@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerAddComponent implements OnInit {
 
+  name: string;
+  age: number;
+  type: CustomerType;
+
+  CustomerType: CustomerType;
+
   constructor() { }
 
   ngOnInit(): void {
