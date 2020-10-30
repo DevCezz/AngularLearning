@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Customer } from '../model';
 
 @Component({
   selector: 'app-customer-details',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class CustomerDetailsComponent {
 
-  customer: Customer = null;
+  customer: Customer;
 
   nameColor: string = "blue";
   isActive: boolean = true;
