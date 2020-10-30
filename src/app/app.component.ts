@@ -20,7 +20,10 @@ import { Customer } from './model';
               <button class="btn btn-primary" (click)="changeColor()" type="button">Przełącz kolor</button>
             </div>
             <div class="col-sm-5">
-              <img *ngIf="showPhoto else noPhoto" [src]="customer.photoUrl" />
+              <div *ngIf="showPhoto; then photo else noPhoto"></div>
+              <ng-template #photo>
+                <img [src]="customer.photoUrl" />
+              </ng-template>
               <ng-template #noPhoto>
                 <p>Zdjęcie ukryte</p>
               </ng-template>
