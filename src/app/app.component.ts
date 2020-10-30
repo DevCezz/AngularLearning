@@ -4,6 +4,7 @@ import { Customer } from './model';
 @Component({
   selector: 'app-root',
   template: `
+    <p>{{ nameInput.value }}</p>
     <h1 [style.color]="nameColor" [class.isActive]="isActive">{{ customer.name.toUpperCase() }}</h1>
     <p>{{ customer.description }}</p>
     <p>Wiek: {{ customer.age }}</p>
