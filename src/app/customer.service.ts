@@ -62,6 +62,6 @@ export class CustomerService {
   constructor() { }
 
   getCustomers() {
-    this.customers;
+    return this.customers;
   }
 }
