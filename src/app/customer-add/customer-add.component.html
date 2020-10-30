@@ -1,1 +1,24 @@
-<p>customer-add works!</p>
+<div class="card">
+    <div class="card-header">Dodaj klienta</div>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="name">Nazwa klienta</label>
+                <input type="text" class="form-control" id="name" />
+            </div>
+            <div class="form-group">
+                <label for="age">Wiek</label>
+                <input type="text" class="form-control" id="age" />
+            </div>
+            <div class="form-group">
+                <label for="type">Typ</label>
+                <select class="form-control">
+                    <option [value]="CustomerType.Standard">Standard</option>
+                    <option [value]="CustomerType.Premium">Premium</option>
+                    <option [value]="CustomerType.VIP">VIP</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary">Dodaj</button>
+        </form>
+    </div>
+</div>
