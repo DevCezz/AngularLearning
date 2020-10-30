@@ -11,3 +11,9 @@ export interface Address {
     houseNumber: number;
     city: string;
 }
+
+export enum CustomerType {
+    Standard,
+    Premium,
+    VIP
+}
