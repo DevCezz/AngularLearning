@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Customer, CustomerType } from '../model';
 
 @Component({
@@ -18,6 +18,7 @@ export class CustomerDetailsComponent {
   isActive: boolean = true;
   showPhoto: boolean = false;
 
+  @Output()
   shift = new EventEmitter();
 
   // utworzenie pola o takiej samej nazwie jak enum daje możliwość korzystania,
