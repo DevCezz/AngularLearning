@@ -20,9 +20,7 @@ export class CustomerBrowserComponent implements OnInit {
   constructor(private customerService: CustomerService) {}
 
   ngOnInit(): void {
-    this.customerService.getCustomers().subscribe(response => {
-      this.customers = response;
-    });
+    this.refresh();
   }
 
   changeColor() {
@@ -41,5 +39,11 @@ export class CustomerBrowserComponent implements OnInit {
 
   deleteCustomer() {
     this.customerService.deleteCustomer(this.customer).subscribe();
+  }
+
+  private refresh() {
+    this.customerService.getCustomers().subscribe(response => {
+      this.customers = response;
+    });
   }
 }
