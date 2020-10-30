@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
+import { MessageService } from '../message.service';
 import { Customer, CustomerType } from '../model';
 
 @Component({
@@ -27,6 +28,8 @@ export class CustomerDetailsComponent implements OnInit, OnDestroy, OnChanges {
   // ze stałych switcha a nie z wartości liczbowych
   CustomerType = CustomerType;
   
+  constructor(private messageService: MessageService) {}
+
   ngOnInit(): void {
     console.log(`init`);
   }
