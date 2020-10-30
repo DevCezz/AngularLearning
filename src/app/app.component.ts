@@ -20,7 +20,13 @@ import { Customer } from './model';
               <button class="btn btn-primary" (click)="changeColor()" type="button">Przełącz kolor</button>
             </div>
             <div class="col-sm-5">
-              <img [src]="customer.photoUrl" />
+              <img *ngIf="showPhoto else noPhoto" [src]="customer.photoUrl" />
+              <ng-template #noPhoto>
+                <p>Zdjęcie ukryte</p>
+              </ng-template>
+              <div class="form-check">
+                <label><input type="checkbox" [(ngModel)]="showPhoto" class="form-check-input"> Pokaż zdjęcie</label>
+              </div>
             </div>
           </div>
         </div>
@@ -46,6 +52,7 @@ export class AppComponent {
 
   nameColor: string = "blue";
   isActive: boolean = true;
+  showPhoto: boolean = false;
 
   constructor() {}
 
