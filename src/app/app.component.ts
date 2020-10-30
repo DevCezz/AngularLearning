@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { Customer } from './model';
+import { Customer, CustomerType } from './model';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,15 @@ import { Customer } from './model';
     <div class="container">
       <div class="card">
         <div class="card-header">
-          <h1 [style.color]="nameColor" [class.isActive]="isActive">{{ customer.name.toUpperCase() }}</h1>
+          <h1 [style.color]="nameColor" [class.isActive]="isActive">
+            {{ customer.name.toUpperCase() }}
+            <ng-container [ngSwitch]="customer.type">
+              <ng-container *ngSwitchCase="CustomerType.Standard">*</ng-container>
+              <ng-container *ngSwitchCase="CustomerType.Premium">**</ng-container>
+              <ng-container *ngSwitchCase="CustomerType.VIP">***</ng-container>
+              <ng-container *ngSwitchDefault>nieznany typ</ng-container>
+            </ng-container>
+          </h1>
         </div>
         <div class="card-body">
           <div class="row">
@@ -50,12 +58,16 @@ export class AppComponent {
       street: "Zielona",
       houseNumber: 5,
       city: "Warszawa"
-    }
+    },
+    type: CustomerType.Premium
   };
 
   nameColor: string = "blue";
   isActive: boolean = true;
   showPhoto: boolean = false;
+  // utworzenie pola o takiej samej nazwie jak enum daje możliwość korzystania,
+  // ze stałych switcha a nie z wartości liczbowych
+  CustomerType = CustomerType;
 
   constructor() {}
 
