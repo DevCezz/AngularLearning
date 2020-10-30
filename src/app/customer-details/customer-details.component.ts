@@ -37,7 +37,9 @@ export class CustomerDetailsComponent implements OnInit, OnDestroy, OnChanges {
   
   // Wywołuje się przed init
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('change');
+    if (!changes.customer.firstChange) {
+      console.log(`change from ${changes.customer.previousValue.name} to ${changes.customer.currentValue.name}`);
+    }
   }
 
   changeColor() {
