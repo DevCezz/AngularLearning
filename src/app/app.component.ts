@@ -33,7 +33,7 @@ import { Customer, CustomerType } from './model';
               <p>Wiek: {{ customer.age }}</p>
               <p>Adres: {{ customer.address.street }} {{ customer.address.houseNumber }}, {{ customer.address.city }}</p>
               <ul>
-                <li *ngFor="let category of customer.categories">{{ category }}</li>
+                <li *ngFor="let category of customer.categories; let oddCategory = odd" [class.oddCategory]="oddCategory">{{ category }}</li>
               </ul>
               <button class="btn btn-primary" (click)="this.isActive = !this.isActive" type="button">Przełącz podkreślenie</button>
               <button class="btn btn-primary" (click)="changeColor()" type="button">Przełącz kolor</button>
@@ -56,7 +56,8 @@ import { Customer, CustomerType } from './model';
     </div>
   `,
   styles: [
-    '.isActive { text-decoration: underline; }'
+    '.isActive { text-decoration: underline; }',
+    '.oddCategory { color: green; }'
   ]
 })
 export class AppComponent {
