@@ -18,4 +18,8 @@ export class CustomerService {
     return this.httpClient.get<Customer[]>(`${this.config.apiUrl}/customers`)
       .pipe(map(customers => customers.slice(0, this.config.customerLimit)));
   }
+
+  createCustomer(customer: Customer) {
+    
+  }
 }
