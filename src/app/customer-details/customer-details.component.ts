@@ -29,4 +29,11 @@ export class CustomerDetailsComponent {
     this.nameColor = this.nameColor === "blue" ? "red" : "blue";
   }
 
+  left() {
+    this.shift.emit("left");
+  }
+
+  right() {
+    this.shift.emit("right");
+  }
 }
