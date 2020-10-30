@@ -20,6 +20,7 @@ export class CustomerDetailsComponent implements OnInit, OnDestroy {
   nameColor: string = "blue";
   isActive: boolean = true;
   showPhoto: boolean = false;
+  counter: number = 0;
   
   // utworzenie pola o takiej samej nazwie jak enum daje możliwość korzystania,
   // ze stałych switcha a nie z wartości liczbowych
