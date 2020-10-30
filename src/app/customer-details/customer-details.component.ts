@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class CustomerDetailsComponent {
 
+  customer: Customer = null;
+
   nameColor: string = "blue";
   isActive: boolean = true;
   showPhoto: boolean = false;

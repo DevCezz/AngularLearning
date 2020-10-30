@@ -9,6 +9,8 @@ import { Customer, CustomerType } from '../model';
 })
 export class CustomerBrowserComponent {
 
+  customer: Customer = null;
+
   customers: Customer[] = [
     {
       name: "Jan Kowalski",
