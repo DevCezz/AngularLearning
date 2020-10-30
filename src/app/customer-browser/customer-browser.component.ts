@@ -14,7 +14,8 @@ export class CustomerBrowserComponent {
   @ViewChild('details')
   detailsComponent: CustomerDetailsComponent;
 
-  customer: Customer = null;
+  customers: Customer[];
+  customer: Customer;
 
   constructor(private customerService: CustomerService) {}
 
