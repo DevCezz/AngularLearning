@@ -19,4 +19,8 @@ export class CustomerDetailsComponent {
   // ze stałych switcha a nie z wartości liczbowych
   CustomerType = CustomerType;
 
+  changeColor() {
+    this.nameColor = this.nameColor === "blue" ? "red" : "blue";
+  }
+
 }

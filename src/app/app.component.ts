@@ -13,8 +13,4 @@ import { Customer, CustomerType } from './model';
 export class AppComponent {
 
   constructor() {}
-
-  changeColor() {
-    this.nameColor = this.nameColor === "blue" ? "red" : "blue";
-  }
 }
