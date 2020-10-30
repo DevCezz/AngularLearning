@@ -13,6 +13,6 @@ export class CustomerService {
   ) { }
 
   getCustomers() {
-    return this.customers.slice(0, this.config.customerLimit);
+    return this.httpClient.get<Customer[]>(`${this.config.apiUrl}/customers`)
   }
 }
