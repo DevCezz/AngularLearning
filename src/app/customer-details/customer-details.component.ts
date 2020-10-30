@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Customer, CustomerType } from '../model';
 
 @Component({
@@ -11,6 +11,7 @@ import { Customer, CustomerType } from '../model';
 })
 export class CustomerDetailsComponent {
 
+  @Input()
   customer: Customer;
 
   nameColor: string = "blue";
