@@ -38,4 +38,8 @@ export class CustomerBrowserComponent implements OnInit {
       this.customer = this.customers[idx + 1];
     }
   }
+
+  deleteCustomer() {
+    this.customerService.deleteCustomer(this.customer).subscribe();
+  }
 }
