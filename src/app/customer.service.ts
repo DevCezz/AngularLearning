@@ -62,6 +62,6 @@ export class CustomerService {
   constructor(private config: Config) { }
 
   getCustomers() {
-    return this.customers;
+    return this.customers.slice(0, this.config.customerLimit);
   }
 }
