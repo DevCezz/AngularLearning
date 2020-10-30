@@ -34,6 +34,6 @@ export class CustomerAddComponent implements OnInit {
         houseNumber: 0,
         street: ''
       }
-    });
+    }).subscribe();
   }
 }
