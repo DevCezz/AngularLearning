@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CustomerDetailsComponent } from '../customer-details/customer-details.component';
 import { CustomerService } from '../customer.service';
 import { Customer, CustomerType } from '../model';
@@ -9,7 +9,7 @@ import { Customer, CustomerType } from '../model';
   styles: [
   ]
 })
-export class CustomerBrowserComponent {
+export class CustomerBrowserComponent implements OnInit {
 
   @ViewChild('details')
   detailsComponent: CustomerDetailsComponent;
@@ -18,6 +18,10 @@ export class CustomerBrowserComponent {
   customer: Customer;
 
   constructor(private customerService: CustomerService) {}
+
+  ngOnInit(): void {
+    this.customers = this.customerService.getCustomers();
+  }
 
   changeColor() {
     this.detailsComponent.changeColor();
