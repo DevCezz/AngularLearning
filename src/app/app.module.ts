@@ -8,7 +8,7 @@ import { HighlightDirective } from './highlight.directive';
 import { CustomerBrowserComponent } from './customer-browser/customer-browser.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { CustomerService } from './customer.service';
-import { Config } from './model';
+import { CONFIG, Config } from './model';
 
 const config: Config = {
   customerLimit: 10
@@ -28,7 +28,7 @@ const config: Config = {
   ],
   providers: [
     CustomerService,
-    { provide: Config, useValue: config }
+    { provide: CONFIG, useValue: config }
   ],
   bootstrap: [AppComponent]
 })
