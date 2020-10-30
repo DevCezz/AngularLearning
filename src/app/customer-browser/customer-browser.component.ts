@@ -15,7 +15,7 @@ export class CustomerBrowserComponent implements OnInit {
   detailsComponent: CustomerDetailsComponent;
 
   customers: Customer[];
-  customer: Customer;
+  customer: Customer = null;
 
   constructor(private customerService: CustomerService) {}
 
