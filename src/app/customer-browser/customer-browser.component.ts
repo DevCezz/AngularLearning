@@ -38,7 +38,12 @@ export class CustomerBrowserComponent implements OnInit {
   }
 
   deleteCustomer() {
-    this.customerService.deleteCustomer(this.customer).subscribe();
+    this.customerService.deleteCustomer(this.customer).subscribe(
+      () => { 
+        this.refresh();
+        this.customer = null;
+      }
+    );
   }
 
   private refresh() {
