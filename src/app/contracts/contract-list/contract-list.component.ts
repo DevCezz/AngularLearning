@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContractService } from '../contract.service';
 import { Contract } from '../model';
 
 @Component({
@@ -11,7 +12,7 @@ export class ContractListComponent implements OnInit {
 
   constracts: Contract[];
 
-  constructor() { }
+  constructor(private contractService: ContractService) { }
 
   ngOnInit(): void {
   }
