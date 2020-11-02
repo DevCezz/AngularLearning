@@ -9,9 +9,11 @@ import { ContractsModule } from './contracts/contracts.module';
 import { CustomersModule } from './customers/customers.module';
 import { CoreModule } from './core/core.module';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './core/not-found/not-found.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'customers', pathMatch: 'full' }
+  { path: '', redirectTo: 'customers', pathMatch: 'full' },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
