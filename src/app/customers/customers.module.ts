@@ -10,7 +10,7 @@ import { CustomerAddDeactivateGuard } from './customer-add-deactivate-guard.serv
 
 const routes: Routes = [
   { path: 'customers', component: CustomerBrowserComponent },
-  { path: 'customers/add', component: CustomerAddComponent, canActivate: [ AuthGuard ] }
+  { path: 'customers/add', component: CustomerAddComponent, canActivate: [ AuthGuard ], canDeactivate: [ CustomerAddDeactivateGuard ] }
 ];
 
 @NgModule({
