@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
+import { CommonModule } from '@angular/common';
 
 const config: Config = {
   customerLimit: 10,
@@ -16,6 +17,7 @@ const config: Config = {
 
 @NgModule({
   imports: [
+    CommonModule,
     RouterModule
   ],
   providers: [
