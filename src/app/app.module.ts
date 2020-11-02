@@ -16,7 +16,8 @@ import { ContractListComponent } from './contracts/contract-list/contract-list.c
 const routes: Routes = [
   { path: 'customers', component: CustomerBrowserComponent },
   { path: 'customers/add', component: CustomerAddComponent },
-  { path: 'contracts', component: ContractListComponent }
+  { path: 'contracts', component: ContractListComponent },
+  { path: '', redirectTo: 'customers', pathMatch: 'full' }
 ]
 
 @NgModule({
