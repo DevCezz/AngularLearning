@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  { path: 'contracts/:id', component: ContractDetailsComponent },
   { path: 'contracts', component: ContractListComponent }
 ]
 
