@@ -4,6 +4,7 @@ import { ContractService } from './contract.service';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule, Routes } from '@angular/router';
 import { ContractDetailsComponent } from './contract-details/contract-details.component';
+import { ContractResolver } from './contract-resolver.service';
 
 const routes: Routes = [
   { path: 'contracts/:id', component: ContractDetailsComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   providers: [
-    ContractService
+    ContractService,
+    ContractResolver
   ],
   exports: [
     ContractListComponent
