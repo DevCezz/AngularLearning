@@ -7,7 +7,13 @@ import { ContractDetailsComponent } from './contract-details/contract-details.co
 import { ContractResolver } from './contract-resolver.service';
 
 const routes: Routes = [
-  { path: 'contracts/:id', component: ContractDetailsComponent },
+  { 
+    path: 'contracts/:id', 
+    component: ContractDetailsComponent,
+    resolve: {
+      contract: ContractResolver
+    }
+  },
   { path: 'contracts', component: ContractListComponent }
 ]
 
