@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ContractListComponent } from './contract-list/contract-list.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [ContractListComponent],
   imports: [
     CommonModule
   ]
