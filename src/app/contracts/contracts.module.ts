@@ -8,13 +8,13 @@ import { ContractResolver } from './contract-resolver.service';
 
 const routes: Routes = [
   { 
-    path: 'contracts/:id', 
+    path: ':id', 
     component: ContractDetailsComponent,
     resolve: {
       contract: ContractResolver
     }
   },
-  { path: 'contracts', component: ContractListComponent }
+  { path: '', component: ContractListComponent }
 ]
 
 @NgModule({
