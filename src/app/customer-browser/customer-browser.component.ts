@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Observable } from 'rxjs';
 import { CustomerDetailsComponent } from '../customer-details/customer-details.component';
 import { CustomerService } from '../customer.service';
 import { MessageService } from '../message.service';
@@ -15,7 +16,8 @@ export class CustomerBrowserComponent implements OnInit {
   @ViewChild('details')
   detailsComponent: CustomerDetailsComponent;
 
-  customers: Customer[];
+  // customers: Customer[];
+  customers$: Observable<Customer[]>
   customer: Customer = null;
 
   constructor(
