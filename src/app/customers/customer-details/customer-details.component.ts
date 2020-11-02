@@ -1,9 +1,9 @@
 import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
-import { MessageService } from '../message.service';
+import { MessageService } from 'src/app/message.service';
 import { Customer, CustomerType } from '../model';
 
 @Component({
-  selector: 'app-customer-details',
+  selector: 'cus-customer-details',
   templateUrl: './customer-details.component.html',
   styles: [
     '.isActive { text-decoration: underline; }',
