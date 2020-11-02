@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './highlight.directive';
 import { CustomerBrowserComponent } from './customer-browser/customer-browser.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
-import { CustomerService } from './customer.service';
+import { CustomerService } from './customers/customer.service';
 import { CONFIG, Config } from './model';
 import { ToastrModule } from 'ngx-toastr';
 import { MessageService } from './message.service';

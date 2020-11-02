@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { CONFIG, Config, Customer, CustomerType } from './model';
+import { CONFIG, Config, Customer, CustomerType } from '../model';
 
 import { map } from 'rxjs/operators';
 
