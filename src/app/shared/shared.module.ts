@@ -1,12 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { CapitalizePipe } from './capitalize.pipe';
+import { HighlightDirective } from './highlight.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CapitalizePipe,
+    HighlightDirective
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
+  ],
+  exports: [
+    CommonModule,    
+    FormsModule,
+    CapitalizePipe,
+    HighlightDirective
   ]
 })
 export class SharedModule { }
