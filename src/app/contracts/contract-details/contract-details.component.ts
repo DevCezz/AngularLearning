@@ -14,6 +14,9 @@ export class ContractDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(params => {
+      const id = parseInt(params['id']);
+    });
   }
 
 }
