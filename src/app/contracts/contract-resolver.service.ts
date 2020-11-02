@@ -12,6 +12,7 @@ export class ContractResolver implements Resolve<Contract> {
   ) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Contract | Observable<Contract> | Promise<Contract> {
-    throw new Error('Method not implemented.');
+    const id = parseInt(route.params['id']);
+    return this.contractService.getContract(id);
   }
 }
