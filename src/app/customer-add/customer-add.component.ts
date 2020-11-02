@@ -39,8 +39,7 @@ export class CustomerAddComponent implements OnInit {
         street: ''
       }
     }).subscribe(
-      () => this.messageService.success(`Dodano klienta o imieniu ${this.name}`),
-      () => this.messageService.error("Błąd połączenia z serwerem")
+      () => this.messageService.success(`Dodano klienta o imieniu ${this.name}`)
     );
   }
 }

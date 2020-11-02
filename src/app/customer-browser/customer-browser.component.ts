@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { CustomerDetailsComponent } from '../customer-details/customer-details.component';
 import { CustomerService } from '../customer.service';
 import { MessageService } from '../message.service';
-import { Customer, CustomerType } from '../model';
+import { Customer } from '../model';
 
 @Component({
   selector: 'app-customer-browser',
@@ -47,15 +47,13 @@ export class CustomerBrowserComponent implements OnInit {
         this.messageService.success(`Udało się usunąć klienta ${this.customer.name}`);
         this.customer = null;
         this.refresh();
-      },
-      error => this.messageService.error("Błąd połączenia z serwerem")
+      }
     );
   }
 
   private refresh() {
     this.customerService.getCustomers().subscribe(
-      response => this.customers = response,
-      () => this.messageService.error("Błąd połączenia z serwerem")
+      response => this.customers = response
     );
   }
 }
