@@ -9,6 +9,7 @@
                     <th scope="col">Nazwa klienta</th>
                     <th scope="col">Data zawarcia</th>
                     <th scope="col">Kwota</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -16,6 +17,7 @@
                     <th scope="row">{{ contract.customerName }}</th>
                     <td>{{ contract.date | date: 'dd-MM-yyyy' }}</td>
                     <td>{{ contract.value }}</td>
+                    <td><a routerLink="{{ contract.id }}">Szczegóły</a></td>
                 </tr>
             </tbody>
         </table>
