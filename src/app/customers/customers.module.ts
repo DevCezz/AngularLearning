@@ -5,10 +5,11 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
 import { CustomerService } from './customer.service';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../core/auth-guard.service';
 
 const routes: Routes = [
   { path: 'customers', component: CustomerBrowserComponent },
-  { path: 'customers/add', component: CustomerAddComponent }
+  { path: 'customers/add', component: CustomerAddComponent, canActivate: [ AuthGuard ] }
 ];
 
 @NgModule({
