@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MessageService } from 'src/app/message.service';
+import { MessageService } from 'src/app/core/message.service';
 import { CustomerDetailsComponent } from '../customer-details/customer-details.component';
 import { CustomerService } from '../customer.service';
 import { Customer } from '../model';
