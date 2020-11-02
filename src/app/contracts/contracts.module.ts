@@ -10,6 +10,9 @@ import { ContractService } from './contract.service';
   ],
   providers: [
     ContractService
+  ],
+  exports: [
+    ContractListComponent
   ]
 })
 export class ContractsModule { }
