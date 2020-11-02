@@ -44,8 +44,9 @@ export class CustomerBrowserComponent implements OnInit {
   deleteCustomer() {
     this.customerService.deleteCustomer(this.customer).subscribe(
       () => { 
-        this.refresh();
+        this.messageService.success(`Udało się usunąć klienta ${this.customer.name}`);
         this.customer = null;
+        this.refresh();
       },
       error => {
         console.log(error);
