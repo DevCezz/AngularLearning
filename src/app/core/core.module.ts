@@ -16,6 +16,9 @@ const config: Config = {
     { provide: CONFIG, useValue: config },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorHandlingInterceptor, multi: true }
   ],
-  declarations: [NavbarComponent]
+  declarations: [NavbarComponent],
+  exports: [
+    NavbarComponent
+  ]
 })
 export class CoreModule { }
