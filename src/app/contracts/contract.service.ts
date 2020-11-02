@@ -1,9 +1,12 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Inject, Injectable } from '@angular/core';
+import { Config, CONFIG } from '../model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ContractService {
 
-  constructor() { }
+  constructor(
+    private httpClient: HttpClient,
+    @Inject(CONFIG) private config: Config
+  ) { }
 }
