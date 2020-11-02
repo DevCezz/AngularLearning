@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Contract } from '../model';
 
 @Component({
   selector: 'app-contract-list',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class ContractListComponent implements OnInit {
+
+  constracts: Contract[];
 
   constructor() { }
 
