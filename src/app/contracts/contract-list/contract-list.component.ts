@@ -3,7 +3,7 @@ import { ContractService } from '../contract.service';
 import { Contract } from '../model';
 
 @Component({
-  selector: 'app-contract-list',
+  selector: 'ctr-contract-list',
   templateUrl: './contract-list.component.html',
   styles: [
   ]
