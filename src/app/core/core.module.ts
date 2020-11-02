@@ -4,6 +4,7 @@ import { CONFIG, Config } from '../model';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorHandlingInterceptor } from './error-handling.interceptor';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule } from '@angular/router';
 
 const config: Config = {
   customerLimit: 10,
@@ -11,6 +12,9 @@ const config: Config = {
 }
 
 @NgModule({
+  imports: [
+    RouterModule
+  ],
   providers: [
     MessageService,
     { provide: CONFIG, useValue: config },
