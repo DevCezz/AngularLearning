@@ -6,6 +6,7 @@ import { CustomerService } from './customer.service';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../core/auth-guard.service';
+import { CustomerAddDeactivateGuard } from './customer-add-deactivate-guard.service';
 
 const routes: Routes = [
   { path: 'customers', component: CustomerBrowserComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   providers: [
-    CustomerService
+    CustomerService,
+    CustomerAddDeactivateGuard
   ],
   exports: [
     CustomerAddComponent,
