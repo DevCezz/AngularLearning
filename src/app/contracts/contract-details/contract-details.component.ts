@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ContractService } from '../contract.service';
 import { Contract } from '../model';
 
 @Component({
@@ -14,7 +13,6 @@ export class ContractDetailsComponent implements OnInit {
   contract: Contract;
 
   constructor(
-    private contractService: ContractService,
     private activatedRoute: ActivatedRoute
   ) { }
 
