@@ -8,6 +8,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContractsModule } from './contracts/contracts.module';
 import { CustomersModule } from './customers/customers.module';
 import { CoreModule } from './core/core.module';
+import { RouterModule, Routes } from '@angular/router';
+import { CustomerBrowserComponent } from './customers/customer-browser/customer-browser.component';
+import { CustomerAddComponent } from './customers/customer-add/customer-add.component';
+import { ContractListComponent } from './contracts/contract-list/contract-list.component';
+
+const routes: Routes = [
+  { path: 'customers', component: CustomerBrowserComponent },
+  { path: 'customers/add', component: CustomerAddComponent },
+  { path: 'contracts', component: ContractListComponent }
+]
 
 @NgModule({
   declarations: [
@@ -18,6 +28,7 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    RouterModule.forRoot(routes),
     ToastrModule.forRoot(),
     ContractsModule,
     CustomersModule
