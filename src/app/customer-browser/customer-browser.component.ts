@@ -48,10 +48,7 @@ export class CustomerBrowserComponent implements OnInit {
         this.customer = null;
         this.refresh();
       },
-      error => {
-        console.log(error);
-        this.messageService.error("Błąd połączenia z serwerem");
-      }
+      error => this.messageService.error("Błąd połączenia z serwerem")
     );
   }
 
