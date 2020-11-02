@@ -16,8 +16,7 @@ export class CustomerBrowserComponent implements OnInit {
   @ViewChild('details')
   detailsComponent: CustomerDetailsComponent;
 
-  // customers: Customer[];
-  customers$: Observable<Customer[]>
+  customers: Customer[];
   customer: Customer = null;
 
   constructor(
@@ -34,13 +33,13 @@ export class CustomerBrowserComponent implements OnInit {
   }
 
   onShift(direction: string) {
-    // const idx = this.customers.indexOf(this.customer);
+    const idx = this.customers.indexOf(this.customer);
     
-    // if (idx > 0 && direction === 'left') {
-    //   this.customer = this.customers[idx - 1];
-    // } else if (idx < this.customers.length - 1 && direction === 'right') {
-    //   this.customer = this.customers[idx + 1];
-    // }
+    if (idx > 0 && direction === 'left') {
+      this.customer = this.customers[idx - 1];
+    } else if (idx < this.customers.length - 1 && direction === 'right') {
+      this.customer = this.customers[idx + 1];
+    }
   }
 
   deleteCustomer() {
@@ -54,6 +53,8 @@ export class CustomerBrowserComponent implements OnInit {
   }
 
   private refresh() {
-    this.customers$ = this.customerService.getCustomers();
+    this.customerService.getCustomers().subscribe(
+      response => this.customers = response
+    );
   }
 }

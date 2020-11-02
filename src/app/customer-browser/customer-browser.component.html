@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body">
-        <select [(ngModel)]="customer" *ngIf="customers$ | async as customers">
+        <select [(ngModel)]="customer">
             <option [ngValue]="null">Brak klienta</option>
             <option *ngFor="let c of customers" [ngValue]="c">{{ c.name }}</option>
         </select>
