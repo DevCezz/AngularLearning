@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CustomerDetailsComponent } from '../customer-details/customer-details.component';
 import { CustomerService } from '../customer.service';
+import { MessageService } from '../message.service';
 import { Customer, CustomerType } from '../model';
 
 @Component({
@@ -17,7 +18,10 @@ export class CustomerBrowserComponent implements OnInit {
   customers: Customer[];
   customer: Customer = null;
 
-  constructor(private customerService: CustomerService) {}
+  constructor(
+    private customerService: CustomerService,
+    private messageService: MessageService
+  ) {}
 
   ngOnInit(): void {
     this.refresh();
