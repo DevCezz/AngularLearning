@@ -12,6 +12,6 @@ export class ContractService {
   ) { }
 
   getContracts() {
-    return this.httpClient.get<Contract[]>(`${this.config.apiUrl}/constract`);
+    return this.httpClient.get<Contract[]>(`${this.config.apiUrl}/contracts`);
   }
 }
