@@ -21,7 +21,7 @@
                     {{ customer.address.city }}</p>
                 <ul>
                     <li *ngFor="let category of customer.categories; let oddCategory = odd"
-                        [class.oddCategory]="oddCategory">{{ category }}</li>
+                        [class.oddCategory]="oddCategory">{{ category | capitalize }}</li>
                 </ul>
                 <button class="btn btn-primary" (click)="this.isActive = !this.isActive" type="button">Przełącz
                     podkreślenie</button>
