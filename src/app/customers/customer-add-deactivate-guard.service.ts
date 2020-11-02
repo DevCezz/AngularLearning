@@ -7,8 +7,8 @@ import { CustomerAddComponent } from './customer-add/customer-add.component';
 export class CustomerAddDeactivateGuard implements CanDeactivate<CustomerAddComponent> {
 
   constructor() { }
-  
+
   canDeactivate(component: CustomerAddComponent, currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    throw new Error('Method not implemented.');
+    return !(component.name || component.age || component.type);
   }
 }
