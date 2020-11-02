@@ -53,8 +53,9 @@ export class CustomerBrowserComponent implements OnInit {
   }
 
   private refresh() {
-    this.customerService.getCustomers().subscribe(response => {
-      this.customers = response;
-    });
+    this.customerService.getCustomers().subscribe(
+      response => this.customers = response,
+      () => this.messageService.error("Błąd połączenia z serwerem")
+    );
   }
 }
