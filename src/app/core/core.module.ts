@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
 
 const config: Config = {
   customerLimit: 10,
@@ -21,7 +22,8 @@ const config: Config = {
     MessageService,
     { provide: CONFIG, useValue: config },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorHandlingInterceptor, multi: true },
-    AuthGuard
+    AuthGuard,
+    AuthService
   ],
   declarations: [NavbarComponent, NotFoundComponent],
   exports: [
