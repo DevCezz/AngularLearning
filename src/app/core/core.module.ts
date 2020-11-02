@@ -5,6 +5,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorHandlingInterceptor } from './error-handling.interceptor';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const config: Config = {
   customerLimit: 10,
@@ -20,7 +21,7 @@ const config: Config = {
     { provide: CONFIG, useValue: config },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorHandlingInterceptor, multi: true }
   ],
-  declarations: [NavbarComponent],
+  declarations: [NavbarComponent, NotFoundComponent],
   exports: [
     NavbarComponent
   ]
