@@ -38,6 +38,9 @@ export class CustomerAddComponent implements OnInit {
         houseNumber: 0,
         street: ''
       }
-    }).subscribe();
+    }).subscribe(
+      () => this.messageService.success(`Dodano klienta o imieniu ${this.name}`),
+      () => this.messageService.error("Błąd połączenia z serwerem")
+    );
   }
 }
