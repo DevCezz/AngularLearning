@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../customer.service';
+import { MessageService } from '../message.service';
 import { CustomerType } from '../model';
 
 @Component({
@@ -16,7 +17,10 @@ export class CustomerAddComponent implements OnInit {
 
   CustomerType = CustomerType;
 
-  constructor(private customerService: CustomerService) { }
+  constructor(
+    private customerService: CustomerService,
+    private messageService: MessageService
+  ) { }
 
   ngOnInit(): void {
   }
