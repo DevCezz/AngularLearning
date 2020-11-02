@@ -54,8 +54,6 @@ export class CustomerBrowserComponent implements OnInit {
   }
 
   private refresh() {
-    this.customerService.getCustomers().subscribe(
-      response => this.customers = response
-    );
+    this.customers$ = this.customerService.getCustomers();
   }
 }
