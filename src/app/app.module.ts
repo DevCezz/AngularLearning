@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
-import { ContractsModule } from './contracts/contracts.module';
 import { CustomersModule } from './customers/customers.module';
 import { CoreModule } from './core/core.module';
 import { RouterModule, Routes } from '@angular/router';
@@ -28,7 +27,6 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes),
     ToastrModule.forRoot(),
-    ContractsModule,
     CustomersModule
   ],
   bootstrap: [AppComponent]
