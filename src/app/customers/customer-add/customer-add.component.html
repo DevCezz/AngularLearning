@@ -4,15 +4,15 @@
         <form #customerForm="ngForm">
             <div class="form-group">
                 <label for="name">Nazwa klienta</label>
-                <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name" />
+                <input required type="text" class="form-control" id="name" [(ngModel)]="name" name="name" />
             </div>
             <div class="form-group">
                 <label for="age">Wiek</label>
-                <input type="number" class="form-control" id="age" [(ngModel)]="age" name="age" />
+                <input required type="number" class="form-control" id="age" [(ngModel)]="age" name="age" />
             </div>
             <div class="form-group">
                 <label for="type">Typ</label>
-                <select class="form-control" [(ngModel)]="type" name="type">
+                <select required class="form-control" [(ngModel)]="type" name="type">
                     <option [value]="CustomerType.Standard">Standard</option>
                     <option [value]="CustomerType.Premium">Premium</option>
                     <option [value]="CustomerType.VIP">VIP</option>
