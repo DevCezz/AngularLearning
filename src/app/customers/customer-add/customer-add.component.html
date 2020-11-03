@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-header">Dodaj klienta</div>
     <div class="card-body">
-        <form #customerForm="ngForm">
+        <form #customerForm="ngForm" (ngSubmit)="add()">
             <div class="form-group">
                 <label for="name">Nazwa klienta</label>
                 <input required type="text" class="form-control" id="name" [(ngModel)]="name" name="name" />
@@ -18,7 +18,7 @@
                     <option [value]="CustomerType.VIP">VIP</option>
                 </select>
             </div>
-            <button type="button" class="btn btn-primary" (click)="add()" [disabled]="!customerForm.form.valid">Dodaj</button>
+            <button type="submit" class="btn btn-primary" [disabled]="!customerForm.form.valid">Dodaj</button>
         </form>
     </div>
 </div>
