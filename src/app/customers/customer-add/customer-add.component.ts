@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { MessageService } from 'src/app/core/message.service';
 import { CustomerService } from '../customer.service';
 import { CustomerType } from '../model';
@@ -25,7 +26,7 @@ export class CustomerAddComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  add() {
+  add(form: NgForm) {
     this.customerService.createCustomer({
       name: this.name,
       age: this.age,
@@ -39,7 +40,10 @@ export class CustomerAddComponent implements OnInit {
         street: ''
       }
     }).subscribe(
-      () => this.messageService.success(`Dodano klienta o imieniu ${this.name}`)
+      () => {
+        this.messageService.success(`Dodano klienta o imieniu ${this.name}`);
+        form.resetForm();
+      }
     );
   }
 }
