@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-header">Dodaj klienta</div>
     <div class="card-body">
-        <form>
+        <form #customerForm="ngForm">
             <div class="form-group">
                 <label for="name">Nazwa klienta</label>
                 <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name" />
